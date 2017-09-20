@@ -1,6 +1,6 @@
-ln -sn $(hab pkg path core/httpd)/modules {{pkg.path}}/modules
-ln -sn $(hab pkg path core/httpd)/conf {{pkg.path}}/conf
-ln -sn $(hab pkg path core/httpd)/logs {{pkg.path}}/logs
+ln -sn {{pkgPathFor "core/httpd"}}/modules {{pkg.path}}/modules
+ln -sn {{pkgPathFor "core/httpd"}}/conf {{pkg.path}}/conf
+ln -sn {{pkgPathFor "core/httpd"}}/logs {{pkg.path}}/logs
 
 source {{pkg.svc_path}}/hooks/reconfigure
 
