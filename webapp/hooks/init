@@ -9,3 +9,5 @@ mkdir -p {{pkg.svc_data_path}}/htdocs
 mkdir -p {{pkg.svc_data_path}}/cgi-bin
 cp {{pkg.path}}/hello-world  {{pkg.svc_data_path}}/cgi-bin/
 chmod 755 {{pkg.svc_data_path}}/cgi-bin/hello-world
+
+sed -i -e 's/MSGCONF/{{cfg.webapp.name}}/g' {{pkg.svc_data_path}}/cgi-bin/hello-world

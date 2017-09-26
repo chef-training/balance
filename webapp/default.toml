@@ -49,3 +49,6 @@ require = "All Denied"
 order = "Deny, Allow"
 deny = "All"
 allow = "None"
+
+[webapp]
+name = "Jane"
