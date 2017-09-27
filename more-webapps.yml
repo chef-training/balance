@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web-3:
+    image: cheftraining/webapp
+    command: --peer webapp-1
+  web-4:
+    image: cheftraining/webapp
+    command: --peer webapp-1
+networks:
+    default:
+        external:
+            name: balance_default
